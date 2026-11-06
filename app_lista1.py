@@ -520,8 +520,7 @@ if __name__ == "__main__":
         passo(2, "Montar A, B e C na forma canônica controlável")
         st.caption("A última linha de A recebe os coeficientes do denominador com sinal "
                    "trocado; B é a coluna unitária; C recebe os coeficientes do numerador "
-                   "na ordem inversa (β3, β2, β1). As matrizes estão definidas no bloco "
-                   "de dados, junto com as dos outros exercícios.")
+                   "na ordem inversa (β3, β2, β1).")
         mostrar_matriz("A", A4)
         mostrar_matriz("B", B4)
         mostrar_matriz("C", C4)
@@ -549,13 +548,3 @@ if __name__ == "__main__":
         st.caption("Na forma canônica controlável o sistema é controlável por construção, "
                    "então a alocação é sempre possível.")
         bloco_projeto_k(A4, B4, [-4, -4, -5])
-
-        # Conferência extra: na FCC, K também sai por comparação direta de coeficientes.
-        st.markdown("**Atalho (só vale na forma canônica controlável):** a última linha de "
-                    "$A+BK$ é $[-\\alpha_3+k_1,\\; -\\alpha_2+k_2,\\; -\\alpha_1+k_3]$. "
-                    "Igualando ao denominador desejado $s^3+13s^2+56s+80$, cuja última linha "
-                    "é $[-80,\\;-56,\\;-13]$, sai direto "
-                    "$K = [\\alpha_3-a_3,\\; \\alpha_2-a_2,\\; \\alpha_1-a_1]$.")
-        st.latex(r"K = [5 - 80,\; 7 - 56,\; 3 - 13] = [-75,\; -49,\; -10]")
-        st.caption("Mesmo resultado da fórmula de Ackermann. O atalho só existe porque a "
-                   "matriz já está na forma canônica controlável.")
